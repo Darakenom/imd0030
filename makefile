@@ -1,23 +1,24 @@
 PROG = imd0030
 CC = g++
+BUD = build/
 ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
-CPPFLAGS = -O0 -g -Wall -ansi -pedantic -I$(ROOT_DIR)/include
-OBJS = main.o relator.o milhao.o troco.o
+CPPFLAGS =  -O0 -g -Wall -ansi -pedantic -I$(ROOT_DIR)/include
+OBJS = $(BUD)main.o $(BUD)relator.o $(BUD)milhao.o $(BUD)troco.o
 
-$(PROG) : $(OBJS)
-	$(CC) $(OBJS) -o $(PROG) 
+bin/$(PROG) : $(OBJS)
+	$(CC) $(OBJS) -o bin/$(PROG) 
 
-main.o: 
-	$(CC) $(CPPFLAGS) -c src/main.cpp
+$(BUD)main.o: 
+	$(CC) $(CPPFLAGS) -c src/main.cpp  -o $(BUD)main.o
 
-relator.o: include/relator.hpp
-	$(CC) $(CPPFLAGS) -c src/relator.cpp
+$(BUD)relator.o: include/relator.hpp
+	$(CC) $(CPPFLAGS) -c src/relator.cpp -o $(BUD)relator.o
 
-milhao.o: include/milhao.hpp
-	$(CC) $(CPPFLAGS) -c src/milhao.cpp
+$(BUD)milhao.o: include/milhao.hpp
+	$(CC) $(CPPFLAGS) -c src/milhao.cpp -o $(BUD)milhao.o
 
-troco.o: include/troco.hpp
-	$(CC) $(CPPFLAGS) -c src/troco.cpp
+$(BUD)troco.o: include/troco.hpp
+	$(CC) $(CPPFLAGS) -c src/troco.cpp -o $(BUD)troco.o
 
 clean:
-	rm -f *.o
+	rm -f $(BUD)*.o

@@ -3,6 +3,14 @@
 #include "relator.hpp"
 #include "milhao.hpp"
 
+/**
+* @file main.cpp
+* @brief Central que permite o usúario escolher qual função do programa deseja executar
+* @author Tiago Martins Da Silva, Daniel Miercalm Chaves 
+* @since 08/03/2018
+* @date 20/03/2018
+* @sa https://github.com/Darakenom/imd0030
+*/
 int main() {
 	int n=0;
 	while(n!=4){

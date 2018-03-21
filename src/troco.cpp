@@ -1,12 +1,10 @@
 #include <iostream>
 #include "troco.hpp"
 
-/*
- @brief Função troco subtraí as notas do total até zerar, contando quantas vezes conseguiu subtrair cada nota.
- @details Função troco utiliza um vetor nt[] com as notas disponiveis(dispostas em ordem decrescente),
- while subtraí nt[i] do valor n(valor total) enquanto a operação resultar em >=0, se resultar 
- em menor que 0, o vetor recebe i+1, assim passando para uma nota menor até zerar n. Vetor v[]
- serve meramente como contador.
+/**
+* @file troco.cpp 
+* @brief Função troco subtraí as notas do total até zerar, contando quantas vezes conseguiu subtrair cada nota.
+* @details Função troco utiliza um vetor nt[] com as notas disponiveis(dispostas em ordem decrescente), while subtraí nt[i] do valor n(valor total) enquanto a operação resultar em >=0, se resultar em menor que 0, o vetor recebe i+1, assim passando para uma nota menor até zerar n. Vetor v[] serve meramente como contador.
 */
 void troco() {
 	int n;

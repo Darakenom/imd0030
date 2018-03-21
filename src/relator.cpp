@@ -1,6 +1,10 @@
 #include <iostream>
 #include "relator.hpp"
 
+/**
+* @file relator.cpp
+* @brief Função relator lê 10 valores e retorna a quantidade que você digitou cada
+*/
 void relator() {
 	int i;
 	std::cout << "Digite 10 valores quaisquer:\n" << std::endl;
